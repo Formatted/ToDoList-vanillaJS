@@ -1,1 +1,7 @@
-
+.rem {
+  background-color: red;
+  border: none;
+  color: white;
+  padding: 10px 10px;
+  text-align: center;
+}
