@@ -1,8 +1,45 @@
 .rem {
-  background-color: red;
   border: none;
-  color: white;
-  padding: 10px 10px;
+  margin: 7px 5px;
   text-align: center;
   border-radius: 8px;
+  color: #fff;
+  background-color: #d9534f;
+  border-color: #d9534f;
 }
+.rem:hover {
+  color: #fff;
+  background-color: #c9302c;
+  border-color: #c12e2a;
+}
+.main3 {
+  width: 960px;
+  margin: 0 auto;
+}
+h1 {
+  margin: 0 auto;
+  text-align: center;
+  /*border: red 1px dotted;*/
+}
+.inputs {
+  /*border: red 1px dotted;*/
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+.btn {
+  margin: 10px 10px;
+  color: #373a3c;
+  background-color: #fff;
+  border-color: #ccc;
+}
+.btn:hover {
+  color: #373a3c;
+  background-color: #e6e6e6;
+  border-color: #adadad;
+}
+/** {*/
+/*  border-color: red;*/
+/*  border-bottom-width: 1px;*/
+/*  border-style: dotted;*/
+/*}*/
