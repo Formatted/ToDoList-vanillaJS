@@ -21,9 +21,11 @@ function show() {
 var addElement = function() {
     // console.log(document.getElementById("toDoText").value);
     var newText = document.getElementById("toDoText").value;
-    todos.push(newText);
-    show();
-    document.getElementById("toDoText").value = "";
+    if (newText != "") {
+            todos.push(newText);
+            show();
+            document.getElementById("toDoText").value = "";
+        }
 };
 
 var removeElement = function() {
@@ -31,4 +33,15 @@ var removeElement = function() {
     todos.splice(id, 1);
     show();
 };
+var addOnEnter = function(e) {
+    if (e.charCode == "13") {
+        var newText = document.getElementById("toDoText").value;
+        if (newText != "") {
+            todos.push(newText);
+            show();
+            document.getElementById("toDoText").value = "";
+        }
+    };
+};
 document.getElementById("addToList").addEventListener("click", addElement);
+document.getElementById("toDoText").addEventListener("keypress", addOnEnter, false);
