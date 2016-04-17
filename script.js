@@ -16,7 +16,7 @@ function show() {
         if(doneDos.length === 0){
         fill = '<h2>There is nothing to do!</h2>';
       } else {
-        fill = '<h2>You have done all these!GZ!</h2>';
+        fill = '<h2>You have done all these! GZ!</h2>';
       }
     }
     document.getElementById("toDoList").innerHTML = fill;
@@ -25,6 +25,7 @@ function show() {
       var fillD = '<ul>';
       for (var iii = 0; iii < doneDos.length; iii += 1) {
         fillD += '<li>' + doneDos[iii]
+        + ' <button class="remFromAdd" id="' + iii + '">remove</button>'
         + '</li>';
       }
       fillD += '</ul>';
@@ -41,6 +42,10 @@ function show() {
     for (var x = 0; x < donebuttons.length; x += 1) {
         donebuttons[x].addEventListener('click', doneWItem);
     };
+    var btnRemoveDone = document.getElementsByClassName('remFromAdd');
+    for (var nnn = 0; nnn < btnRemoveDone.length; nnn += 1) {
+        btnRemoveDone[nnn].addEventListener('click', removeDoneElement);
+    };
 };
 
 var addElement = function() {
@@ -53,10 +58,17 @@ var addElement = function() {
 };
 
 var removeElement = function() {
-    var id= this.getAttribute('id');
+    var id = this.getAttribute('id');
     todos.splice(id, 1);
     show();
 };
+
+var removeDoneElement = function() {
+    var id = this.getAttribute('id');
+    doneDos.splice(id, 1);
+    show();
+};
+
 var doneWItem = function() {
   var id = this.getAttribute('id');
   id = id - 100;
@@ -65,6 +77,7 @@ var doneWItem = function() {
   todos.splice(id, 1);
   show();
 }
+
 var addOnEnter = function(e) {
     if (e.charCode == "13") {
         var newText = document.getElementById("toDoText").value;
