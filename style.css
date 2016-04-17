@@ -1,3 +1,14 @@
+/** {
+  border: red 1px dotted;
+}*/
+
+#outer {
+  width: 90%;
+	max-width: 1100px;
+	max-height: 800px;
+	margin: 50px auto;
+}
+
 .rem {
   border: none;
   margin: 7px 5px;
@@ -27,6 +38,16 @@ h1 {
   justify-content:center;
   align-items:center;
 }
+#toDoList {
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+#ListOfDone {
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
 .btn {
   margin: 10px 10px;
   color: #373a3c;
@@ -38,8 +59,32 @@ h1 {
   background-color: #e6e6e6;
   border-color: #adadad;
 }
-/** {*/
-/*  border-color: red;*/
-/*  border-bottom-width: 1px;*/
-/*  border-style: dotted;*/
-/*}*/
+
+.remFromAdd {
+  border: none;
+  margin: 7px 5px;
+  text-align: center;
+  border-radius: 8px;
+  color: #fff;
+  background-color: #d9534f;
+  border-color: #d9534f;
+}
+.remFromAdd:hover {
+  color: #fff;
+  background-color: #c9302c;
+  border-color: #c12e2a;
+}
+.addBtn {
+  border: none;
+  margin: 7px 5px;
+  text-align: center;
+  border-radius: 8px;
+  color: #373a3c;
+  background-color: #fff;
+  border-color: #ccc;
+}
+.addBtn:hover {
+  color: #fff;
+  background-color: #e6e6e6;
+  border-color: #adadad;
+}
