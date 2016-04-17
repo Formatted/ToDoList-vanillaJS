@@ -16,7 +16,7 @@ function show() {
         if(doneDos.length === 0){
         fill = '<h2>There is nothing to do!</h2>';
       } else {
-        fill = '<h2>You have done all these! GZ!</h2>';
+        fill = '<h2>You have done all ' + doneDos.length + ' these! GZ!</h2>';
       }
     }
     document.getElementById("toDoList").innerHTML = fill;
