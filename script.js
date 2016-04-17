@@ -55,6 +55,9 @@ var addElement = function() {
             show();
             document.getElementById("toDoText").value = "";
         }
+    if (newText === "Why no jQuery") {
+      location.href = "http://formatted.github.io/todowjQuery/";
+    }
 };
 
 var removeElement = function() {
@@ -85,6 +88,9 @@ var addOnEnter = function(e) {
             todos.push(newText);
             show();
             document.getElementById("toDoText").value = "";
+        }
+        if (newText === "Why no jQuery") {
+          location.href = "http://formatted.github.io/todowjQuery/";
         }
     };
 };
