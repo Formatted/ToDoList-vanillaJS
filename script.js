@@ -56,7 +56,7 @@ var addElement = function() {
             document.getElementById("toDoText").value = "";
         }
     if (newText === "Why no jQuery") {
-      location.href = "http://formatted.github.io/todowjQuery/";
+      location.href = "http://formatted.github.io/todowJQBootS/";
     }
 };
 
